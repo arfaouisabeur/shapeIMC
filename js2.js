@@ -91,7 +91,7 @@ function startGame() {
         }
       }
     });
-    if (life === 0 && rocksKilled===17) {
+    if (life === 0 && rocksKilled===12) {
       alert("You winn the tresure hunt congratulations make capture decran and show it to saber ");
       clearInterval(moveRocksInterval);
       window.location.reload();
