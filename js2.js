@@ -91,8 +91,8 @@ function startGame() {
         }
       }
     });
-    if (life === 0 && rocksKilled===2) {
-      alert("You winn the game congratulations secret mot is :ena elli sontk ya lwarda ");
+    if (life === 0 && rocksKilled===17) {
+      alert("You winn the tresure hunt congratulations make capture decran and show it to saber ");
       clearInterval(moveRocksInterval);
       window.location.reload();
     }
