@@ -6,7 +6,7 @@ const lifeElement = document.getElementById("life");
 const moveLeftBtn = document.getElementById("moveLeftBtn");
 const moveRightBtn = document.getElementById("moveRightBtn");
 const shootBtn = document.getElementById("shootBtn");
-
+let i=0;
 let life = 4;
 let rocksKilled = 0;
 let lastShotTime = 0;
@@ -92,7 +92,7 @@ function startGame() {
       }
     });
     if (life === 0) {
-      if (rocksKilled === 2) {
+      if (i === 2) {
         clearInterval(moveRocksInterval);
         alert("You win the treasure hunt! Congratulations!");
         window.location.reload();
@@ -102,14 +102,12 @@ function startGame() {
         window.location.reload();
       }
     }
-
     if (rocksKilled === 90) {
       speed = 500;
     }
     if (rocksKilled === 60) {
       speed = 600;
     }
-
     if (rocksKilled === 30) {
       speed = 650;
     }
@@ -187,9 +185,13 @@ shootBtn.addEventListener("click", () => {
 
           if (rock.classList.contains("rocksP")) {
             scoreElement.innerHTML = parseInt(scoreElement.innerHTML) + 1;
+            i=i+1
+            console.log(i);
           } 
           else if (rock.classList.contains("rocksN")) {
             scoreElement.innerHTML = parseInt(scoreElement.innerHTML) - 1;
+            i=i-1;
+            console.log(i);
           }
           rocksKilled++;
         }
@@ -211,3 +213,5 @@ restartBtn.addEventListener("click", resetGame);
 
 // Start the initial game
 startGame();
+
+
