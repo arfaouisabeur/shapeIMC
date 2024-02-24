@@ -92,7 +92,7 @@ function startGame() {
       }
     });
     if (life === 0) {
-      if (i === 2) {
+      if (i === 12) {
         clearInterval(moveRocksInterval);
         alert("You win the treasure hunt! Congratulations!");
         window.location.reload();
