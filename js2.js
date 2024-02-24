@@ -91,15 +91,16 @@ function startGame() {
         }
       }
     });
-    if (life === 0 && rocksKilled===12) {
-      alert("You winn the tresure hunt congratulations make capture decran and show it to saber ");
-      clearInterval(moveRocksInterval);
-      window.location.reload();
-    }
-    else if (life === 0) {
-      alert("Game Overrrrr");
-      clearInterval(moveRocksInterval);
-      window.location.reload();
+    if (life === 0) {
+      if (rocksKilled === 2) {
+        clearInterval(moveRocksInterval);
+        alert("You win the treasure hunt! Congratulations!");
+        window.location.reload();
+      } else {
+        clearInterval(moveRocksInterval);
+        alert("Game Over");
+        window.location.reload();
+      }
     }
 
     if (rocksKilled === 90) {
