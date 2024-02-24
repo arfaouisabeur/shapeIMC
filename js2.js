@@ -94,7 +94,7 @@ function startGame() {
     if (life === 0) {
       if (i === 12) {
         clearInterval(moveRocksInterval);
-        alert("You win the treasure hunt! Congratulations!");
+        alert("You win the treasure hunt!  Congratulations! make a screen shot of this message and show it to saber . ");
         window.location.reload();
       } else {
         clearInterval(moveRocksInterval);
